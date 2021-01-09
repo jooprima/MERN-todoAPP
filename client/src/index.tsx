@@ -1,25 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import webFontLoader from 'webfontloader';
-import { QueryCache, ReactQueryCacheProvider } from 'react-query'
+import React from "react";
+import ReactDOM from "react-dom";
+import webFontLoader from "webfontloader";
 
-import './assets/styles/main.css';
-import App from './App';
-
-const queryCache = new QueryCache()
+import "./assets/styles/main.css";
+import App from "./App";
 
 webFontLoader.load({
   google: {
-    families: ['Raleway:400,700:latin', 'Montserrat:700:latin']
-  }
+    families: ["Raleway:400,700:latin", "Montserrat:700:latin"],
+  },
 });
 
 ReactDOM.render(
   <>
-    <ReactQueryCacheProvider queryCache={queryCache}>
-      <App />
-    </ReactQueryCacheProvider>
-    {/* <ReactQueryDevtools initialIsOpen /> */}
+    <App />
   </>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
