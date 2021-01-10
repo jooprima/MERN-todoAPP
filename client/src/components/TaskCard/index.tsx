@@ -69,4 +69,5 @@ const TaskCard: React.FC<Props> = ({ title, taskId, status }) => {
   );
 };
 
+
 export default TaskCard;
