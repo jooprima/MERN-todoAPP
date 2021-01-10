@@ -2,6 +2,7 @@ import React from "react";
 
 import CheckListIcon from "assets/svg/checklist";
 import TrashIcon from "assets/svg/trash";
+import DeleteModal from "components/DeleteModal";
 
 type Props = {
   title: string;
@@ -22,6 +23,8 @@ const TaskCard: React.FC<Props> = ({ title }) => {
           <TrashIcon />
         </span>
       </div>
+
+      <DeleteModal />
     </div>
   );
 };
