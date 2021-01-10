@@ -11553,6 +11553,10 @@ video {
   height: 100vh;
 }
 
+.h-taskList {
+  height: calc(100vh - 260px);
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -40306,6 +40310,10 @@ video {
     height: 100vh;
   }
 
+  .sm\:h-taskList {
+    height: calc(100vh - 260px);
+  }
+
   .sm\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -69014,6 +69022,10 @@ video {
 
   .md\:h-screen {
     height: 100vh;
+  }
+
+  .md\:h-taskList {
+    height: calc(100vh - 260px);
   }
 
   .md\:text-xs {
@@ -97726,6 +97738,10 @@ video {
     height: 100vh;
   }
 
+  .lg\:h-taskList {
+    height: calc(100vh - 260px);
+  }
+
   .lg\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -126436,6 +126452,10 @@ video {
     height: 100vh;
   }
 
+  .xl\:h-taskList {
+    height: calc(100vh - 260px);
+  }
+
   .xl\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
@@ -155144,6 +155164,10 @@ video {
 
   .\32xl\:h-screen {
     height: 100vh;
+  }
+
+  .\32xl\:h-taskList {
+    height: calc(100vh - 260px);
   }
 
   .\32xl\:text-xs {
