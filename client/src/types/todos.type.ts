@@ -1,5 +1,3 @@
-import { toEditorSettings } from "typescript";
-
 export interface Todos {
   todos: Todo[];
 }
@@ -13,6 +11,11 @@ interface Todo {
   __v: number;
 }
 
-export interface getTodoResult {
+export interface GetTodoResult {
   result: Todo;
+}
+
+export interface TodoBody {
+  title: string;
+  status?: "completed" | "uncompleted";
 }
