@@ -7,7 +7,6 @@ import { useMutation, useQueryCache } from "react-query";
 import { postTodo } from "api/postTodo";
 
 import CloseIcon from "assets/svg/close";
-import { type } from "os";
 
 type Props = {
   inProp: boolean;
@@ -54,13 +53,24 @@ const overlayTransitionStyles = {
 };
 
 const Form: React.FC<Props> = ({ inProp, onClose }) => {
+  const cache = useQueryCache();
+
   const { register, handleSubmit, errors, reset } = useForm<Inputs>();
 
-  const onSubmit = (data: Inputs): void => {
-    console.log("data ??", data);
-  };
+  const [mutate] = useMutation(postTodo, {
+    onSuccess: () => {
+      cache.invalidateQueries("todos");
+    },
+  });
 
-  console.log("errors ??", errors);
+  const onSubmit = async (data: Inputs): Promise<void> => {
+    try {
+      await mutate(data);
+      reset();
+    } catch (error) {
+      throw new Error(error);
+    }
+  };
 
   const handleOnClose = () => {
     reset();
