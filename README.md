@@ -1,3 +1,15 @@
 ﻿# MERN-todoAPP
 
-To Do List Application , build with TypeScript, React, NextJS, MongoDB, NodeJS, TailwindCSS
+Objective :
+- Membuat aplikasi fullstack
+
+- Memahami alur kerja aplikasi
+
+- Membuat API endpoints dengan Express
+
+- Bekerja dengan TypeScript
+
+- Mendesain aplikasi dengan Tailwind CSS
+
+Bahasa dan Library Yang Di Gunakan :
+TypeScript, React, NextJS, MongoDB, NodeJS, TailwindCSS
